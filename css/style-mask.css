@@ -4,10 +4,8 @@
   top: 0;
   bottom: 0;
   right: 0;
-  /*opacity: 0.1;*/
   opacity: inherit;
   z-index: 2000;
-  /*background-color: #000000;*/
   background-color: rgba(0, 0, 0, 0.1); }
 
 .loading-screen {

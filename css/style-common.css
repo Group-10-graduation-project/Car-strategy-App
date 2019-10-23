@@ -1,7 +1,7 @@
-/* input:not([type='checkbox']):focus{outline:none;border:0;-webkit-appearance:none;-moz-appearance:none;appearance:none;} */
+
 input:not([type='checkbox']):focus,input:not([type='radio']):focus{outline:none;border:0;} 
 
-/*a*/
+
 html,body{-webkit-touch-callout: none;-webkit-text-size-adjust:none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);   -webkit-user-select:none;}
 
 
@@ -10,7 +10,6 @@ html,body{-webkit-touch-callout: none;-webkit-text-size-adjust:none;-webkit-tap-
 .right{float: right;}
 
 
-/*PopBox*/
 .goodCommon{position: fixed;top: 0px;left: 0px;height: 100%;width: 100%;background: rgba(0,0,0,0.4);z-index: 888;display: table;}
 .goodTableRow{display: table-row;}
 .goodTableCell{display: table-cell;text-align: center;vertical-align: middle;}
@@ -21,7 +20,6 @@ html,body{-webkit-touch-callout: none;-webkit-text-size-adjust:none;-webkit-tap-
 .goodmianContent p{margin:7px 0;text-align: left;}
 
 
-/*header Block*/
 header{background: #202020;color: #fff;padding: 8px 5px;min-height: 20px;}
 .headerContainer{position: relative;}
 .headerContainer_left{position: absolute; top: 0px;left: 8px;}
@@ -33,7 +31,6 @@ header{background: #202020;color: #fff;padding: 8px 5px;min-height: 20px;}
 .search-icon{height: 20px;width: 20px;display: inline-block;background:url('../images/search.png') no-repeat top left;background-size:100%;}
 
 
-/*nav*/
 nav  {position:fixed;bottom:0;width:100%;z-index:999;left:0;box-shadow:0 0 5px #AAA;overflow:hidden;}
 nav a { height:52px; padding:0px;position:relative;display:block;float:left;font-size:0.8em;color:#FFF; border:none;}
 nav img{ border:0; float:left;}
@@ -58,7 +55,6 @@ nav a.four {width:25%;}
 .shnm-4{width: 20px;height: 20px;background: url(../images/user_active.png) no-repeat top left;background-size:100%;margin-left: auto;margin-right: auto;margin-top: 8px;opacity: 0.7;}
 .shnm4{width: 20px;height: 20px;background: url(../images/user.png) no-repeat top left;background-size:100%;margin-left: auto;margin-right: auto;margin-top: 8px;opacity: 0.7;}
 
-/*information menu*/
 .menu{
         background: rgba(97,97,95,0.2);
     position: fixed;
@@ -80,7 +76,6 @@ color: #fff;
 padding: 20px 40px 0;
  z-index: 100;
 }
-.menu-list ul{}
 .menu-list ul li{margin: 4px 0;min-width: 120px;
 width: 100%;
 clear: both;}
@@ -105,7 +100,6 @@ margin-right: 10px;}
 
 
 
-/*swipe*/
 .swipe-wrap {position: absolute;
 min-height: 310px;
 top: 50%;
@@ -114,9 +108,8 @@ margin-top: -155px;}
 .swipe-item { overflow: hidden; position: relative;}
 .swipe-item > div { float:left;display:block; width:100%; position: relative;}
 .swipe-img li { display:block; text-align:center;}
-/*.swipe-img li img {width:100%;}*/
 
-/*row*/
+
 .row{width: 100%;clear: both;display: inline-block;}
 .row-input-label{
     margin: 8px 10px;
@@ -148,7 +141,6 @@ margin-top: -155px;}
     line-height: 20px;
 }
 
-/*login register common css*/
 .login-register-bg{background: #E4E2E3;}
 .login-register-container{background: #F6F6F6; padding: 20px 0;}
 .bottom-text > a{ color: #FA8362; display: inline-block;float:right;padding: 6px 8px;}
@@ -179,8 +171,6 @@ margin-top: -155px;}
     height: 14px; }
 
 
-
-/*Setting   Index*/
 .userCentreColor{color: #5f646e;width: 98%;display:inline-block;
 padding: 12px 0;}
 .userCentreRow_cell16{width:16%;float:left;}
@@ -266,7 +256,6 @@ padding: 5px 10px; margin-left: 20px;
 border: 1px solid #ccc;color:#fff;}
 .font-Size-14{font-size:14px;} .font-weight{font-weight: 600;}
 
-/*car confirm block*/
 .car-color-block{
     width: 16px;
 height: 16px;
@@ -283,8 +272,6 @@ left: -8px;
 
 
 .nav-bottom{padding-bottom: 60px;}
-
-/*user information*/
 
 .active-text{color:#FB4345;}
 .remove-bind-btn{
@@ -304,7 +291,6 @@ left: -8px;
    color: #8D8D8D;
 }
 
-/*real_name*/
 
 .real-name-my-head{
     font-size: 16px;
@@ -349,7 +335,6 @@ left: -4px;}
 display: inline-block;
 border: 1px solid #ccc;}
 
-/*bind card*/
 .bank-list{
  position: relative;
 }
@@ -382,8 +367,6 @@ border: 1px solid #ccc;}
     margin-bottom: 8px;
 }
 
-
-/*salary*/
 
 .cols-2{
     width:50%;
@@ -421,14 +404,10 @@ border: 1px solid #ccc;}
    display: block;
    margin: 6px 0;
 }
-.salary-value{
-
-}
 .salary-time{
   color: #8D8D8D;
 }
 
-/*system-info*/
 
 .system-info{
    border-bottom: 1px solid #C0C0C0;
