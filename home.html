@@ -2,97 +2,97 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>首页</title>
-    <link rel="stylesheet" href="./css/style-base.css">
-    <link rel="stylesheet" href="./css/style-common.css">
-    <link rel="stylesheet" href="./css/style-home.css">
-    <script src="../js/swipe.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+            .carousel-inner img {
+                width: 100%;
+                height: 100%;
+            }
+            </style>
 </head>
 <body>
-<header>
-    <div class="headerContainer">
-        <div class="headerContainer_left left">
-        </div>
-        <div class="headerContainer_center">
-            <span>首页</span>
-        </div>
-        <div class="headerContainer_right right">
-        </div>
-    </div>
+    <header>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+ 
+				<!-- 指示符 -->
+				<ul class="carousel-indicators">
+				  <li data-target="#demo" data-slide-to="0" class="active"></li>
+				  <li data-target="#demo" data-slide-to="1"></li>
+				  <li data-target="#demo" data-slide-to="2"></li>
+				</ul>
+				 
+				<!-- 轮播图片 -->
+				<div class="carousel-inner" >
+				  <div class="carousel-item active" style="height: 400px;">
+				  <img src="./images/1.png" >
+				  </div>
+				  <div class="carousel-item" style=" height: 400px;" > 
+				  <img src="./images/2.png">
+				  </div>
+				  <div class="carousel-item" style="height: 400px;">
+				  <img src="./images/3.png">
+				  </div>
+				</div>
+				 
+				<!-- 左右切换按钮 -->
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				  <span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+				  <span class="carousel-control-next-icon"></span>
+				</a>
+				 
+				</div>
 </header>
-<div class="container home-bg">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">导航栏</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">主页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./me.html">我的</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">选车</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./XUanche.html">社区</a>
+            </li>      
+          </ul>
+        </div>  
+      </nav>
 
-     <div class="swipe-wrap clearfix">
-       <ul class="swipe-img" id="swipe">
-        <li class="swipe-item">
-           <div class="home-icons">  
-                 <ul>
-                       <li class="margin-bottom"><a href="./mystore/mystore.html"><img src="../images/store.png" width="80px"/></a></li>
-                       <li class="margin-bottom"><a href="./mystore/mymanagement.html"><img src="../images/goods_manage.png" width="80px"/></a></li>
-                       <li class="margin-bottom"><a href="./myorder/goorder.html"><img src="../images/order.png" width="80px"/></a></li>
-                       <li class="margin-bottom"><a href="./myorder/myorder.html"><img src="../images/order_list.png" width="80px"/></a></li>
-                       <li><a href="./mycustomer/mycustomer.html"><img src="../images/my_customer.png" width="80px"/></a></li>
-                       <li><a href="./mymoney/mymoney.html"><img src="../images/money.png" width="80px"/></a></li>
-               </ul>
+      <div class="container" style="margin-top:10px">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="fakeimg">
+                  <img src="./images/4.jpg" class="rounded-circle" alt="Cinque Terre" style=" height: 200px;" > 
+                          <p style="text-align: center;"> 地区</p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="fakeimg">
+                  <img src="./images/5.jpg" class="rounded-circle" alt="Cinque Terre" style=" height: 200px;" > 
+                          <p style="text-align: center;"> 热搜</p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="fakeimg">
+                  <img src="./images/6.jpg" class="rounded-circle" alt="Cinque Terre" style="height: 200px;" > 
+                          <p style="text-align: center;"> 更多热门。。。。</p>
+                </div>
+              </div>
+            </div>
           </div>
-             <div class="home-icons">
-                <ul>
-                       <li class="margin-bottom"><a href="#"><img src="../images/old_car.png" width="80px"/></a></li>
-                       <li class="margin-bottom"><a href="#"><img src="../images/car_goods.png" width="80px"/></a></li>
-                       <li class="margin-bottom"><a href="#"><img src="../images/order.png" width="80px"/></a></li>
-                       <li class="margin-bottom"><a href="#"><img src="../images/order_list.png" width="80px"/></a></li>
-                   </ul>
-           </div>
-       </li>
-      </ul>
-    
-    </div>
-  <div>
-         <a href="#" id="arrowLeft" class="arrow-left hide" onclick="window.mySwipe.prev()">
-                <span></span>
-            </a> 
-            <a href="#"  id="arrowRight" class="arrow-right" onclick="window.mySwipe.next()">
-                <span></span>
-            </a> 
-      </div>
-</div>
-<script>
-var elem = document.getElementById('swipe');
-   window.mySwipe = Swipe(elem, {
-  callback: function(pos) {
-    if(pos%2 === 0){
-          document.getElementById('arrowLeft').className = "arrow-left hide";
-           document.getElementById('arrowRight').className = "arrow-right";
-    }else{
-         document.getElementById('arrowLeft').className = "arrow-left";
-           document.getElementById('arrowRight').className = "arrow-right hide";
-    }
-  }
-});
-
-</script>
-
-<nav class="clearfix">
-    <a href="./home.html"  class="one on">
-        <div class="beij borderRight">
-            <div class="shnm-1"></div>		<div class="db activeText">首页</div>
-        </div>
-    </a>
-    <a href="./management.html"  class="one on">
-        <div class="beij borderRight">
-            <div class="shnm2"></div>		<div class="db">商品</div>
-        </div>
-    </a>
-    <a href="./mystore.html" class="one on">
-        <div class="beij borderRight">
-            <div class="shnm3"></div>		<div class="db">微店</div>
-        </div>
-    </a>
-    <a href="./me.html"  class="one on">
-        <div class="beij">
-            <div class="shnm4"></div>		<div class="db">我的</div>
-        </div>
-    </a>
-</nav>
 </body>
 </html>

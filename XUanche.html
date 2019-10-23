@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>社区</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style>
+     
+        .clearfix {
+            overflow: auto;
+            border: 3px solid #4CAF50;
+    padding: 5px;
+        }
+        
+        .img2 {
+            float: right;
+        }
+        </style>
+</head>
+<body>
+<h1>社区</h1>    
+<div class="container mt-3">
+        <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="地区">
+                <div class="input-group-append">
+                  <button class="btn btn-success" type="submit">搜索</button>  
+                 </div>
+        </div>
+    </div> 
+    <h2>车界动态</h2>
+    <div class="row">
+            <div class="col-sm-4">
+                    <div class="clearfix" >
+                            <img class="img2" src="../images/7.jpg" alt="Pineapple" width="200" height="200">
+                            近年来，随着消费需求日趋个性化与多元化，汽车产品的细分化进程也在不断推进。
+                在中高级汽车市场中特别如此，受中级车不断加大、加长，高级轿车定位的双重压力，
+                中高级轿车市场的竞争环境也在逐步加剧。
+                北京现代于2013年开始布局中高级细分市场的精细化布局，
+                推出了名图车型。
+                </div>    
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-sm-4">
+                        <div class="clearfix" >
+                                <img class="img2" src="../images/8.jpg" alt="Pineapple" width="200" height="200">
+                                5月13日，CCPC纳智捷“全新优6杯中国好赛手”在杭州萧山试驾基地再次展开激烈角逐。
+                                在刚刚结束的CCPC·纳智捷“全新优6杯中国好赛手”开幕战中，激烈竞技诞生了首站冠亚季军，冠军晋级总决赛。
+                                在杭州站中纳智捷全新优6依然凭借突出的性能优势，继续为赛事带来了一场视觉盛宴。
+                    </div>    
+                </div>
+            </div>
+            <h2>专业车评</h2>
+            <button onclick="playVid()" type="button">播放视频</button>
+<button onclick="pauseVid()" type="button">暂停视频</button> 
+<br> 
+<video id="video1">
+  <source src="./Mp4/1.mp4" type="video/mp4">
+        
+  <source src="mov_bbb.ogg" type="video/ogg">
+  您的浏览器不支持 HTML5 video  标签。
+</video>
+
+<script> 
+var myVideo=document.getElementById("video1"); 
+
+function playVid()
+{ 
+  myVideo.play(); 
+} 
+
+function pauseVid()
+{ 
+  myVideo.pause(); 
+} 
+</script> 
+<div class="videoinfo"><h2 class="videoinfo-title">你想要柴油车还是汽油车？专业车评员为你讲述其优缺点</h2><p class="videoinfo-text clearfix"><span class="videoinfo-playnums float-left">2162次播放.发布时间：2017年11月15日</span><span class="videoinfo-zan float-right like-0"><i class="icon icon-agree"></i>1</span></p><div class="author"><div class="author-main"><a class="author-link" style="width: 54px; height: 54px; background-image: url(&quot;https://timgmb01.bdimg.com/timg?searchbox_feed&amp;quality=60&amp;wh_rate=0&amp;size=f68_68&amp;ref=http%3A%2F%2Fwww.baidu.com&amp;sec=1571821361&amp;di=b201db387c15432b9e769cbf4a3cd26a&amp;src=http%3A%2F%2Fbos.nj.bpc.baidu.com%2Fv1%2Fmediaspot%2F2fc5638d7ec8246dc7f22ffe64be7ac5.jpeg&quot;);"><i class="vip vip-0"></i></a><div class="author-main-code" style="display: none;"><p class="author-main-codetitle">下载APP关注作者</p><img class="author-main-img" src="data:image/png;base64,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" alt="好看视频二维码"><p class="author-main-codetext">iPhone Andriod</p></div></div><div class="author-detail"><p class="tag-1">娱视看材</p><p class="tag-2"><span>963粉丝</span><span class="author-detail-total">113万次播放</span><span class="author-detail-total">595个视频</span></p></div></div></div>
+<p>Video courtesy of <a href="//www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+</body>
+</html>
