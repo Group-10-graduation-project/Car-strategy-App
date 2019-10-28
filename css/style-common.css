@@ -14,7 +14,6 @@ html,body{-webkit-touch-callout: none;-webkit-text-size-adjust:none;-webkit-tap-
 .goodTableRow{display: table-row;}
 .goodTableCell{display: table-cell;text-align: center;vertical-align: middle;}
 .goodTableContent{background:transparent;background-size: 100% 100%;display: inline-block;position: relative;width: 80%;}
-.closeBtn{z-index:999;display: inline-block;position: absolute;right: 10px;top: 6px;width: 20px;height: 20px;background: url(../images/close.png) no-repeat 0 0;background-size: 100% ;}
 .goodTableTitle{margin: 23px 0 15px 0;}
 .goodmianContent{padding:5px 0px; font-size:12px; color:#5e6164;overflow: auto;}
 .goodmianContent p{margin:7px 0;text-align: left;}
@@ -26,9 +25,7 @@ header{background: #202020;color: #fff;padding: 8px 5px;min-height: 20px;}
 .headerContainer_center{text-align: center; font-size: 15px;}
 .headerContainer_right{position: absolute; top: 0px;right: 18px; text-align: center;line-height: 29px;}
 .headerContainer_right a{color:#fff;}
-.backIcon{height: 20px;width: 20px;display: inline-block;background:url('../images/backIcon.png') no-repeat top left;background-size:100%;}
-.menu-icon{height: 20px;width: 20px;display: inline-block;background:url('../images/list.png') no-repeat top left;background-size:100%;}
-.search-icon{height: 20px;width: 20px;display: inline-block;background:url('../images/search.png') no-repeat top left;background-size:100%;}
+
 
 
 nav  {position:fixed;bottom:0;width:100%;z-index:999;left:0;box-shadow:0 0 5px #AAA;overflow:hidden;}
@@ -46,14 +43,7 @@ nav a.four {width:25%;}
 .beij{margin-top: 5px;}
 .borderRight{border-right:none;}
 .activeText{color:#DF810B;}
-.shnm-1{width: 20px;height: 20px;background: url(../images/home_active.png) no-repeat top left;background-size:100%;margin-left: auto;margin-right: auto;margin-top: 8px;opacity: 0.7;}
-.shnm1{width:20px;height: 20px;background: url(../images/home.png) no-repeat top left;background-size:100%;margin-left: auto;margin-right: auto;margin-top: 8px;opacity: 0.7;}
-.shnm-2{width: 20px;height: 20px;background: url(../images/goods_active.png) no-repeat top left;background-size:100%;margin-left: auto;margin-right: auto;margin-top: 8px;opacity: 0.7;}
-.shnm2{width: 20px;height: 20px;background: url(../images/goods.png) no-repeat top left;background-size:100%;margin-left: auto;margin-right: auto;margin-top: 8px;opacity: 0.7;}
-.shnm-3{width: 20px;height: 20px;background: url(../images/shop_active.png) no-repeat top left;background-size:100%;margin-left: auto;margin-right: auto;margin-top: 8px;opacity: 0.7;}
-.shnm3{width:20px;height: 20px;background: url(../images/shop.png) no-repeat top left;background-size:100%;margin-left: auto;margin-right: auto;margin-top: 8px;opacity: 0.7;}
-.shnm-4{width: 20px;height: 20px;background: url(../images/user_active.png) no-repeat top left;background-size:100%;margin-left: auto;margin-right: auto;margin-top: 8px;opacity: 0.7;}
-.shnm4{width: 20px;height: 20px;background: url(../images/user.png) no-repeat top left;background-size:100%;margin-left: auto;margin-right: auto;margin-top: 8px;opacity: 0.7;}
+
 
 .menu{
         background: rgba(97,97,95,0.2);
@@ -88,14 +78,7 @@ display: inline-block;}
 .list-icon{width:16px;height:16px;display: inline-block;position: relative;
 top: 4px;
 margin-right: 10px;}
-.list-icon-goods{background: url(../images/goods.png) no-repeat center center; background-size: 100% auto;}
-.list-icon-order{background: url(../images/order_icon.png) no-repeat center center; background-size: 100% auto;}
-.list-icon-income{background: url(../images/income.png) no-repeat center center; background-size: 100% auto;}
-.list-icon-salary{background: url(../images/salary.png) no-repeat center center; background-size: 100% auto;}
-.list-icon-customer{background: url(../images/customer.png) no-repeat center center; background-size: 100% auto;}
-.list-icon-system-info{background: url(../images/system_info.png) no-repeat center center; background-size: 100% auto;}
-.list-icon-system-setting{background: url(../images/system_setting.png) no-repeat center center; background-size: 100% auto;}
-.list-icon-exit{background: url(../images/exit.png) no-repeat center center; background-size: 100% auto;}
+
 
 
 
@@ -349,7 +332,7 @@ border: 1px solid #ccc;}
    display: inline-block;
    right: 10px;
    top: 8px;
-   background: transparent url(../images/arrowDown.png) no-repeat 0 0;
+
    background-size: 100% auto;
 }
 .bank-bind-notice{
@@ -381,7 +364,7 @@ border: 1px solid #ccc;}
     width:20px;
     height:16px;
     display: inline-block;
-    background: url(../images/withdraw.png) no-repeat 0 0;
+ 
     background-size: 100% auto;
     position: relative;
     top: 3px;
