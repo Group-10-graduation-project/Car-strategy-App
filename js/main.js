@@ -3,10 +3,10 @@ $(document).ready(function(){
   $(".selection").click(function(){
     var myID = $(this).attr('id');
     var msg = $("#message");
-    alert("you clicked the selection: " + myID);
-    //start AJAX Post request to post data to the server
+    alert("您单击了所选内容: " + myID);
+    //启动ajax post请求将数据发布到服务器
 
-    //end of post request
+    //请求结束
 
     $.ajax({
       type: "POST",

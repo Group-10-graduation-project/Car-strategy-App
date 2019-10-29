@@ -5,8 +5,40 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/styles.css"/>
+  <script>
+		onload = function(){
+			var AS = new AssociateSearch('box', 'txtSearch');
+
+			// 数据格式
+			var json = {
+				data: [
+					{
+						id: 1,
+						title: '地区'
+					},
+					{
+						id: 2,
+						title: '新车'
+					},
+					{
+						id: 3,
+						title: '二手车'
+          },
+          {
+						id: 4,
+						title: '租车'
+					},
+				]
+			}
+			AS.ajaxSearch(function(inputValue, back){
+				// 此回调函数一般用来请求后台数据
+				// 将获取到的数据传入back中
+				back(json)
+			})
+		}
+	</script>
   <title>
     选车
   </title>
@@ -16,32 +48,13 @@
     <header class="header-container">
       <section class="container-fluid">
         <div class="branding">
-          <h3>搜索</h3>
+          <h3>搜索栏</h3>
         </div>
         <div class="social-area">
-          <ul class="social-icons">
-            <li class="icons">
-              <a target="_blank" href="https://facebook.com" title="facebook">
-                <span class="facebook">
-                  <i class="fa fa-facebook"></i>
-                </span>
-              </a>
-            </li>
-            <li class="icons">
-              <a href="https://twitter.com" target="_blank" title="twitter">
-                <span class="twitter">
-                  <i class="fa fa-twitter"></i>
-                </span>
-              </a>
-            </li>
-            <li class="icons">
-              <a href="https://linkedin" target="_blank" title="linkedin">
-                <span class="linkedin">
-                  <i class="fa fa-linkedin"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
+          <div id="box">
+            <input type="text" id="txtSearch">
+            <input type="button" value="搜索" id="btnSearch">
+        </div>
         </div>
       </section>
     </header>
@@ -49,9 +62,22 @@
   </div>
   <div class="main-wrapper">
     <section class="body-content">
-
       <div class="heading">
-        <h3 class="display-1 text-center">BP Anniversary Gifts</h3>
+              <dt>热门推荐：</dt>
+              <dd>
+                  <span class="entrance-item">
+                    <a href="#">价格</a>
+                  </span>
+                  <span class="entrance-item">
+                        <a href="#">车型</a>
+                 </span>
+                      <span class="entrance-item">
+                            <a href="#">品牌</a>
+                     </span>
+                    <span class="entrance-item">
+                        <a href="#">热搜车款</a>
+                    </span>
+              </dd>
       </div>
       <div class="hero">
       
@@ -59,13 +85,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" alt="Coffee Hero Image" src="./images/17.jpg">
+              <img class="d-block w-100" alt="Coffee Hero Image" src="./images/17.jpg"style="width: 1333px;height:600px;">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" alt="bunny" src="./images/easter.jpg">
+              <img class="d-block w-100" alt="bunny" src="./images/18.jpg" style="width: 1333px;height:600px;">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" alt="Christmas season" src="./images/hero_img.jpg">
+              <img class="d-block w-100" alt="Christmas season" src="./images/19.jpg" style="width: 1333px;height:600px;">
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
               <span class="prev-icon">
@@ -93,8 +119,8 @@
       </div>
       <div class="jumbotron-content">
         <div class="jumbotron-fluid">
-          <h1 class="display-4 text-center">Select Your Milestone Gifts</h1>
-          <p class="lead text-center">You can choose Amazon, Tiffany or Bestbuy gift cards</p>
+          <h1 class="display-4 text-center">品牌</h1>
+          <p class="lead text-center">品牌名称</p>
           <div class="icon-container">
             <a href="#column-container" title="scroll down">
               <span class="down-arrow-icon">
@@ -111,26 +137,25 @@
         <div class="row">
           <div class="col-md-4">
             <div class="column-item">
-                <h5 class="display-5 heading">Amazon</h5>
+                <h5 class="display-5 heading">宾利</h5>
 
-                <button type="button" class="btn btn-ligt selection" id="Amazon" data-toggle="modal" data-target="#AmazonmodalElem">Select</button>
+                <button type="button" class="btn btn-ligt selection" id="Bentley" data-toggle="modal" data-target="#AmazonmodalElem">选择</button>
 
                 <!-- 静态-->
                 <div class="modal fade" id="AmazonmodalElem" tabindex="-1" role="dialog" aria-labelledby="AmazonmodalElemLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="AmazonmodalElem">Amazon</h5>
+                        <h5 class="modal-title" id="AmazonmodalElem">宾利</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <p>Thanks for selecting Amazon Gift Card.</p>
-                        <p>You will be receiving your gift card soon.</p>
+                        <p>感谢您选择宾利品牌</p>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Confirm</button>
+                        <button type="button" class="btn btn-primary">确认</button>
                       </div>
                     </div>
                   </div>
@@ -140,25 +165,24 @@
           <div class="col-md-4">
             <div class="column-item">
 
-                <h5 class="display-5 heading">BestBuy</h5>
-                <button type="button" class="btn btn-light selection" id="BesBuy" data-toggle="modal" data-target="#BestbuymodalElem">Select</button>
+                <h5 class="display-5 heading">玛莎拉蒂</h5>
+                <button type="button" class="btn btn-light selection" id="Maserati" data-toggle="modal" data-target="#BestbuymodalElem">选择</button>
 
                 
                 <div class="modal fade" id="BestbuymodalElem" tabindex="-1" role="dialog" aria-labelledby="BestbuymodalElemLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="BestbuymodalElem">Bestbuy</h5>
+                        <h5 class="modal-title" id="BestbuymodalElem">玛莎拉蒂</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <p>Thanks for selecting BestBuy Gift Card.</p>
-                        <p>You will be receiving your gift card soon.</p>
+                          <p>感谢您选择玛莎拉蒂品牌</p>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Confirm</button>
+                        <button type="button" class="btn btn-primary">确认</button>
                       </div>
                     </div>
                   </div>
@@ -167,8 +191,8 @@
           </div>
           <div class="col-md-4">
             <div class="column-item">
-                <h5 class="display-5 heading">Tiffany</h5>
-                <button type="button" class="btn btn-light  selection" id="Tiffany" data-toggle="modal" data-target="#TiffanymodalElem">Select</button>
+                <h5 class="display-5 heading">保时捷</h5>
+                <button type="button" class="btn btn-light  selection" id="Porsche" data-toggle="modal" data-target="#TiffanymodalElem">选择</button>
 
                 <!-- 静态 -->
 
@@ -176,17 +200,16 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="TiffanymodalElem">Tiffany</h5>
+                        <h5 class="modal-title" id="TiffanymodalElem">保时捷</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
-                        <p>Thanks for selecting Tiffany Gift Card.</p>
-                        <p>You will be receiving your gift card soon.</p>
+                          <p>感谢您选择保时捷品牌</p>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Confirm</button>
+                        <button type="button" class="btn btn-primary">确认</button>
                       </div>
                     </div>
                   </div>
@@ -197,25 +220,11 @@
 
       </div>
     </section>
-    <section id="message_container">
-      <div id="message-hide">
-        <h1 class="display-4 message-heading">Your Gift Card: </h1>
-        <p id="message"></p>
-      </div>
-    </section>
-    <div class="footer-wrapper container-fluid">
-      <footer class="footer">
-        <div class="row">
-          <div class="col-md-12">
-            <p class="copyrights">&#xA9;&nbsp;2019 BP All Rights Reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
   </div>
 
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/associateSearch.js"></script>
 </body>
 </html>
