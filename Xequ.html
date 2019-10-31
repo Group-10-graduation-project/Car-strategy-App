@@ -6,9 +6,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
         <style>
-
                 body {
                         font-size: 14px;
                         font-family: 'Courier New', Courier, monospace;
@@ -65,130 +67,274 @@
                 .clearfix {
                         border-bottom: 5px solid #ccc;
                 }
-              
+
+                body,
+                html {
+                        font-size: 100%;
+                        padding: 0;
+                        margin: 0;
+                }
+
+                /* Reset */
+                *,
+                *:after,
+                *:before {
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                }
+
+                .clearfix:before,
+                .clearfix:after {
+                        content: " ";
+                        display: table;
+                }
+
+                .clearfix:after {
+                        clear: both;
+                }
+
+                body {
+                        font-family: "Microsoft YaHei", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif;
+                }
         </style>
 </head>
 
 <body>
         <div class="container">
-                <div>
-                        <h1>社区</h1>
-                        <div class="container mt-3">
-                                <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="地区">
-                                        <div class="input-group-append">
-                                                <button class="btn btn-success" type="submit">搜索</button>
+                <h2>社区</h2>
+                <div class="header-wrapper">
+                        <header class="header-container">
+                          <section class="container-fluid">
+                            <div class="branding">
+                              <h3>搜索栏</h3>
+                            </div>
+                            <div class="social-area">
+                              <div id="box">
+                                <input type="text" id="txtSearch">
+                                <input type="button" value="搜索" id="btnSearch">
+                            </div>
+                            </div>
+                          </section>
+                        </header>
+                <br>
+                <!-- Nav pills -->
+                <ul class="nav nav-pills" role="tablist">
+                        <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#home">车界动态</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#menu1">专业车评</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#menu2">车友会</a>
+                        </li>
+                </ul>
+                ​
+                <!-- Tab panes -->
+                <div class="tab-content">
+                        <div id="home" class="container tab-pane active"><br>
+                                <div class="row">
+                                        <div class="col-md-4 col-sm-6 jQueryEqualHeight3">
+                                                <div class="card">
+                                                        <img class="card-img-top" src="../images/7.jpg"
+                                                                alt="Card image cap">
+                                                        <div class="card-body">
+                                                                <p class="card-text">
+                                                                        近年来，随着消费需求日趋个性化与多元化，汽车产品的细分化进程也在不断推进。
+                                                                        在中高级汽车市场中特别如此，受中级车不断加大、加长，高级轿车定位的双重压力，
+                                                                        中高级轿车市场的竞争环境也在逐步加剧。
+                                                                        北京现代于2013年开始布局中高级细分市场的精细化布局，
+                                                                        推出了名图车型。</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-6 jQueryEqualHeight3">
+                                                <div class="card">
+                                                        <img class="card-img-top" src="../images/8.jpg"
+                                                                alt="Card image cap">
+                                                        <div class="card-body">
+                                                                <p class="card-text">
+                                                                        5月13日，CCPC纳智捷“全新优6杯中国好赛手”在杭州萧山试驾基地再次展开激烈角逐。
+                                                                        在刚刚结束的CCPC·纳智捷“全新优6杯中国好赛手”开幕战中，激烈竞技诞生了首站冠亚季军，冠军晋级总决赛。
+                                                                        在杭州站中纳智捷全新优6依然凭借突出的性能优势，继续为赛事带来了一场视觉盛宴。</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 jQueryEqualHeight3">
+                                                <div class="card">
+                                                        <img class="card-img-top" src="./images/21.jpeg"
+                                                                alt="Card image cap">
+                                                        <div class="card-body">
+                                                                <p class="card-text">而且领克03更有自主小钢炮之说。
+                                                                        如果单从这两台中选择的话，我个人有可能会选择菲斯塔。
+                                                                        原因其实很简单，现代对于领克来说，还是那句话：瘦死的骆驼比马大！现代造车的技术水平相较领克来说还是更有底气的。
+                                                                        而且特别是在发动机的表现上，菲斯塔的发动机的各项指标及兼容性更稳定可靠，另外菲斯塔对燃油的要求也更低一些，92的油就可以。
+                                                                </p>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                </div>
+
+                        </div>
+                        <div id="menu1" class="container tab-pane fade"><br>
+                                <div class="row">
+                                        <div>
+                                                <br>
+                                                <div>
+                                                        <h1>你想要柴油车还是汽油车？专业车评员为你讲述其优缺点</h1>
+                                                        <video id="video1" width="800" controls>
+                                                                <source src="./Mp4/1.mp4" type="video/mp4">
+                                                                <source src="mov_bbb.ogg" type="video/ogg">
+                                                        </video>
+                                                </div>
+                                                <br>
+                                                <div>
+                                                        <h1>【车机微体验】奥迪Q3车机体验播放</h1>
+                                                        <video id="video2" width="800" controls>
+                                                                <source src="./Mp4/2.mp4" type="video/mp4">
+                                                                <source src="mov_bbb.ogg" type="video/ogg">
+                                                        </video>
+                                                </div>
+                                                <br>
+                                                <div>
+                                                        <h1>雷克萨斯ES300h后排体验</h1>
+                                                        <video id="video3" width="800" controls>
+                                                                <source src="./Mp4/3.mp4" type="video/mp4">
+                                                                <source src="mov_bbb.ogg" type="video/ogg">
+                                                        </video>
+                                                </div>
+
+                                                <script>
+                                                        myVid1 = document.getElementById("video1");
+                                                        myVid2 = document.getElementById("video2");
+                                                        myVid3 = document.getElementById("video3");
+
+                                                        function setMedGroup() {
+                                                                myVid1.mediaGroup = "test";
+                                                                myVid2.mediaGroup = "test";
+                                                                myVid3.mediaGroup = "test";
+                                                        }
+
+                                                        function getMedGroup() {
+                                                                alert("Video 1 media group: " + myVid1.mediaGroup +
+                                                                        ". Video 2 media group: " + myVid2.mediaGroup +
+                                                                        "Video 3 media group: " + myVid3.mediaGroup);
+                                                        }
+
+                                                </script>
                                         </div>
                                 </div>
                         </div>
-                </div>
-                <div class="row clearfix">
-                        <div class="col-md-4 column">
-                                <h1>车界动态</h1>
-                                <img class="img2" src="../images/7.jpg" alt="Pineapple" width="200" height="200" >
-                                <p>
-                                        近年来，随着消费需求日趋个性化与多元化，汽车产品的细分化进程也在不断推进。
-                                        在中高级汽车市场中特别如此，受中级车不断加大、加长，高级轿车定位的双重压力，
-                                        中高级轿车市场的竞争环境也在逐步加剧。
-                                        北京现代于2013年开始布局中高级细分市场的精细化布局，
-                                        推出了名图车型。
-                                </p>
-                        </div>
-                        <div class="col-md-4 column">
-                                <img class="img2" src="../images/8.jpg" alt="Pineapple" width="200" height="200">
-                                <p>
-                                        5月13日，CCPC纳智捷“全新优6杯中国好赛手”在杭州萧山试驾基地再次展开激烈角逐。
-                                        在刚刚结束的CCPC·纳智捷“全新优6杯中国好赛手”开幕战中，激烈竞技诞生了首站冠亚季军，冠军晋级总决赛。
-                                        在杭州站中纳智捷全新优6依然凭借突出的性能优势，继续为赛事带来了一场视觉盛宴。
-                                </p>
-                        </div>
-                        <div class="col-md-4 column">
-                                        <img class="img2" src="../images/8.jpg" alt="Pineapple" width="200" height="200">
-                                        <p>
-                                                5月13日，CCPC纳智捷“全新优6杯中国好赛手”在杭州萧山试驾基地再次展开激烈角逐。
-                                                在刚刚结束的CCPC·纳智捷“全新优6杯中国好赛手”开幕战中，激烈竞技诞生了首站冠亚季军，冠军晋级总决赛。
-                                                在杭州站中纳智捷全新优6依然凭借突出的性能优势，继续为赛事带来了一场视觉盛宴。
-                                        </p>
-                                </div>
-                </div>
-                <div>
-                        <h2>专业车评</h2>
-                        <div class="row">
-                                <div class="col-sm-4">
-                                        <button onclick="playVid()" type="button">播放视频</button>
-                                        <button onclick="pauseVid()" type="button">暂停视频</button>
-                                        <br>
-                                        <video id="video1" style="widows: 300px; height: 300px;">
-                                                <source src="./Mp4/1.mp4">
-                                        </video>
-
-                                        <script>
-                                                var myVideo = document.getElementById("video1");
-
-                                                function playVid() {
-                                                        myVideo.play();
-                                                }
-
-                                                function pauseVid() {
-                                                        myVideo.pause();
-                                                } 
-                                        </script>
-                                        <div class="videoinfo">
-                                                <h7 class="videoinfo-title">你想要柴油车还是汽油车？专业车评员为你讲述其优缺点</h7>
-                                                <p class="videoinfo-text clearfix">
-                                                        <span
-                                                                class="videoinfo-playnums float-left">2162次播放.发布时间：2017年11月15日</span>
-                                                </p>
+                        <div id="menu2" class="container tab-pane fade"><br>
+                                <div class="responsive">
+                                        <div class="img">
+                                                <a target="_blank"
+                                                        href="https://tieba.baidu.com/f?kw=%E5%A5%94%E9%A9%B0%E8%BD%A6%E5%8F%8B%E4%BC%9A">
+                                                        <img src="./images/22.jpg" alt="Trolltunga Norway" width="300"
+                                                                height="200">
+                                                </a>
+                                                <div class="desc">奥迪车友会</div>
                                         </div>
                                 </div>
-                        </div>
-                </div>
-                <div>
-                        <h1>车友会</h1>
-
-                        <div class="responsive">
-                                <div class="img">
-                                        <a target="_blank"
-                                                href="https://tieba.baidu.com/f?kw=%E5%A5%94%E9%A9%B0%E8%BD%A6%E5%8F%8B%E4%BC%9A">
-                                                <img src="./images/10.jpg" alt="Trolltunga Norway" width="300"
-                                                        height="200">
-                                        </a>
-                                        <div class="desc">奔驰</div>
+                                <div class="responsive">
+                                        <div class="img">
+                                                <a target="_blank"
+                                                        href="https://tieba.baidu.com/f?kw=%E5%A5%94%E9%A9%B0%E8%BD%A6%E5%8F%8B%E4%BC%9A">
+                                                        <img src="./images/23.jpg" alt="Trolltunga Norway" width="300"
+                                                                height="200">
+                                                </a>
+                                                <div class="desc">奔驰</div>
+                                        </div>
                                 </div>
-                        </div>
-
-
-                        <div class="responsive">
-                                <div class="img">
-                                        <a target="_blank" href="https://bbs.pcauto.com.cn/forum-13372-1.html">
-                                                <img src="./images/11.jpg" alt="Forest" width="600" height="400">
-                                        </a>
-                                        <div class="desc">宝马</div>
+                                <div class="responsive">
+                                        <div class="img">
+                                                <a target="_blank"
+                                                        href="https://tieba.baidu.com/f?kw=%E5%A5%94%E9%A9%B0%E8%BD%A6%E5%8F%8B%E4%BC%9A">
+                                                        <img src="./images/24.jpg" alt="Trolltunga Norway" width="300"
+                                                                height="200">
+                                                </a>
+                                                <div class="desc">奔驰</div>
+                                        </div>
                                 </div>
-                        </div>
-
-                        <div class="responsive">
-                                <div class="img">
-                                        <a target="_blank"
-                                                href="https://club.autohome.com.cn/bbs/brand-39-c-305-1.html">
-                                                <img src="./images/12.jpg" alt="Northern Lights" width="600"
-                                                        height="400">
-                                        </a>
-                                        <div class="desc">宾利</div>
+                                <div class="responsive">
+                                        <div class="img">
+                                                <a target="_blank"
+                                                        href="https://tieba.baidu.com/f?kw=%E5%A5%94%E9%A9%B0%E8%BD%A6%E5%8F%8B%E4%BC%9A">
+                                                        <img src="./images/25.jpg" alt="Trolltunga Norway" width="300"
+                                                                height="200">
+                                                </a>
+                                                <div class="desc">奔驰</div>
+                                        </div>
                                 </div>
-                        </div>
+                                <div class="responsive">
+                                        <div class="img">
+                                                <a target="_blank"
+                                                        href="https://tieba.baidu.com/f?kw=%E5%A5%94%E9%A9%B0%E8%BD%A6%E5%8F%8B%E4%BC%9A">
+                                                        <img src="./images/10.jpg" alt="Trolltunga Norway" width="300"
+                                                                height="200">
+                                                </a>
+                                                <div class="desc">奔驰</div>
+                                        </div>
+                                </div>
 
-                        <div class="responsive">
-                                <div class="img">
-                                        <a target="_blank"
-                                                href="https://club.autohome.com.cn/bbs/brand-57-c-289-1.html">
-                                                <img src="./images/13.jpg" alt="Mountains" width="600" height="400">
-                                        </a>
-                                        <div class="desc">玛莎拉蒂</div>
+
+                                <div class="responsive">
+                                        <div class="img">
+                                                <a target="_blank" href="https://bbs.pcauto.com.cn/forum-13372-1.html">
+                                                        <img src="./images/11.jpg" alt="Forest" width="600"
+                                                                height="400">
+                                                </a>
+                                                <div class="desc">宝马</div>
+                                        </div>
+                                </div>
+
+                                <div class="responsive">
+                                        <div class="img">
+                                                <a target="_blank"
+                                                        href="https://club.autohome.com.cn/bbs/brand-39-c-305-1.html">
+                                                        <img src="./images/12.jpg" alt="Northern Lights" width="600"
+                                                                height="400">
+                                                </a>
+                                                <div class="desc">宾利</div>
+                                        </div>
+                                </div>
+
+                                <div class="responsive">
+                                        <div class="img">
+                                                <a target="_blank"
+                                                        href="https://club.autohome.com.cn/bbs/brand-57-c-289-1.html">
+                                                        <img src="./images/13.jpg" alt="Mountains" width="600"
+                                                                height="400">
+                                                </a>
+                                                <div class="desc">玛莎拉蒂</div>
+                                        </div>
                                 </div>
                         </div>
                 </div>
         </div>
+
+
+        <script src="./js/jquery-1.11.0.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="./js/jquery-equal-height.min.js"></script>
+        <script type="text/javascript">
+                function equal_height() {
+                        // 卡片高度、文字高度和标题高度相等
+                        $('.jQueryEqualHeight3').jQueryEqualHeight('.card .card-body .card-title');
+                        $('.jQueryEqualHeight3').jQueryEqualHeight('.card .card-body .card-text');
+                        $('.jQueryEqualHeight3').jQueryEqualHeight('.card');
+                }
+                $(window).on('load', function (event) {
+                        equal_height();
+                });
+                $(window).resize(function (event) {
+                        equal_height();
+                });
+        </script>
+
+
 </body>
 
 </html>
